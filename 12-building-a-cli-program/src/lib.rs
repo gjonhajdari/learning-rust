@@ -1,10 +1,13 @@
-use std::error::Error;
 use std::fs;
-use std::env;
+// use std::env;
+use std::error::Error;
+use structopt::StructOpt;
 
+#[derive(Debug, StructOpt)]
 pub struct Config {
   pub query: String,
   pub file_path: String,
+  #[structopt(long = "ignore-case")]
   pub ignore_case: bool,
 }
 
@@ -16,8 +19,8 @@ impl Config {
     
     let query = args[1].clone();
     let file_path = args[2].clone();
-
-    let ignore_case = env::var("IGNORE_CASE").is_ok();
+    let ignore_case = args.contains(&"--ignore-case".to_string());
+    // let ignore_case = env::var("IGNORE_CASE").is_ok();
     
     Ok(Config {
       query,
