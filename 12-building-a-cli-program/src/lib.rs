@@ -30,7 +30,7 @@ impl Config {
     };
     
     let ignore_case = args.any(|arg| arg == "--ignore-case");
-    // let ignore_case = env::var("IGNORE_CASE").is_ok();
+    // let ignore_case = env::var("IGNORE_CASE").is_ok(); // using environment variables
     
     Ok(Config {
       query,
