@@ -11,13 +11,14 @@ The Rust language needs to be installed in order to compile and run the code. Yo
 Clone the repository
 
 ```bash
-git clone https://github.com/gjonhajdari/learning-rust
-cd learning-rust/
+$ git clone https://github.com/gjonhajdari/learning-rust
 ```
 
-Go inside of any module and run `cargo run` to compile and run the code.
+Go inside of any module and if it has a binary crate, run `cargo run` to build and compile. If it has library crates `cargo test` to run unit/integration tests.
 
 ```bash
-cd module-name/submodule-name
-cargo run
+$ cd module-name/submodule-name
+
+$ cargo run   # binary crate
+$ cargo test  # library crate
 ```
