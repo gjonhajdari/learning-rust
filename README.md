@@ -14,7 +14,7 @@ Clone the repository
 $ git clone https://github.com/gjonhajdari/learning-rust
 ```
 
-Go inside of any module and if it has a binary crate, run `cargo run` to build and compile. If it has library crates `cargo test` to run unit/integration tests.
+Go inside of any module and if it has a binary crate, run `cargo run` to build and compile. If it has library crates, run `cargo test` to run unit/integration tests.
 
 ```bash
 $ cd module-name/submodule-name
